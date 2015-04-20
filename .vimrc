@@ -1,4 +1,3 @@
-" Pathogen.
 call pathogen#infect()
 
 " Default colorscheme.
@@ -8,9 +7,6 @@ colorscheme slate
 if &diff
     colorscheme darkspectrum
 endif
-
-" Better colorscheme for HTML.
-" autocmd FileType html,htmldjango colorscheme molokai
 
 " Syntax color.
 syntax on
@@ -28,16 +24,13 @@ set autoindent
 set smartindent
 
 " Tab as spaces.
-set expandtab
+" set expandtab
 
 " Tab space.
 set tabstop=4
 
 " Shift width.
 set shiftwidth=4
-
-" OSX modelines in system vimrc is 0. We must change it to 1.
-set modelines=1
 
 " Cursor line/column number.
 set ruler
@@ -49,15 +42,12 @@ set ruler
 set list listchars=tab:\ \ ,trail:·
 
 " Ignore prevent ident on python comments.
-inoremap # X#
+inoremap # #
 
 " Paste mode (f2 key).
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
-
-" Easly insert a pdb tracer.
-imap <F3> import pdb; pdb.set_trace()<ESC>
 
 " Ignore case when searching.
 set ignorecase
@@ -77,15 +67,9 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-" Return to last edit position when opening files.
-autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \    exe "normal! g`\"" |
-    \ endif
-
 " JS and HTML files should only have 2 spaces indentation.
-autocmd FileType javascript,html,htmldjango set shiftwidth=2
-autocmd FileType javascript,html,htmldjango set tabstop=2
+autocmd FileType javascript,html set shiftwidth=2
+autocmd FileType javascript,html set tabstop=2
 
 " Colorcolumn for python and javascript files.
 autocmd FileType python,javascript set colorcolumn=80
@@ -98,19 +82,12 @@ autocmd FileType gitcommit set colorcolumn=73
 autocmd FileType gitcommit highlight ColorColumn guibg=Red
 autocmd BufNewFile,BufRead *.git/modules/**/COMMIT_EDITMSG     set ft=gitcommit
 
-" Zen Coding
-let g:user_zen_expandabbr_key='<C-e>'
-
-" Minibuffer explorer
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
+" Emmet
+let g:user_emmet_expandabbr_key='<C-e>'
 
 " Syntastic.
 let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['python', 'javascript'],
+                           \ 'active_filetypes': ['python', 'javascript', 'c', 'c++'],
                            \ 'passive_filetypes': [] }
 set statusline +=%#warningmsg#
 set statusline +=%{SyntasticStatuslineFlag()}
