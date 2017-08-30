@@ -1,17 +1,37 @@
-My vimrc.
-========
+# My vimrc
+
 My vimrc configuration.
 
-Make commands
--------------
+## Make commands
+
 Make command has some funcitons. They are:
+
+* make install: install on your home directory
 * make update: to update the current repository
-* make apply: apply changes on your home directory
 * make submit: send your changes to online repository
 
-Plugins
--------
-Plugins installed 
-* Pathogen (to install other plugins easily)
-* syntastic
+## Plugins
+
+Plugins installed
+
+* L9
+* Plug
 * Emmet
+* lusty
+* vundle
+* vim-jsx
+* nerdtree
+* Pathogen
+* syntastic
+* command-t
+* colorizer
+* syntastic
+* emmet-vim
+* indentLine
+* FuzzyFinder
+* vCoolor.vim
+* vim-fugitive
+* vim-pathogen
+* nerdcommenter
+* vim-powerline
+* vim-nerdtree-tabs
