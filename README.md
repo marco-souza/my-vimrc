@@ -34,3 +34,11 @@ Plugins installed
 * nerdcommenter
 * vim-powerline
 * vim-nerdtree-tabs
+
+## Commands
+
+- Collapse - `zc` or `zC`
+- Expand - `zo` or `zO`
+- File tree - `ctrl+\`
+- Comment - `\+cc`
+- Uncomment - `\+cu`
