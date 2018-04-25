@@ -9,23 +9,19 @@
 
 " ------------------------
 
-" Call pathogen
-call pathogen#infect()
-
-" Call vim-plug
-call plug#begin()
-
 " Call Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
     "" Init Vundle
     Plugin 'VundleVim/Vundle.vim'
 
     "" Install Themes
-    " Plugin 'wombat256.vim' in .vim/colors/
-    " Plugin 'Wombat'
+    Plugin 'dracula/vim'
+    Plugin 'github-theme'
+    Plugin 'Wombat'
     Plugin 'monkoose/boa.vim'
-	Plugin 'stephenmckinney/vim-solarized-powerline'
+    Plugin 'stephenmckinney/vim-solarized-powerline'
 
 
     "" Install Plugin
@@ -118,22 +114,21 @@ nmap <silent> <NUL> :FufCoverageFile<CR>
     let g:NERDCommentEmptyLines = 1
     " Enable trimming of trailing whitespace when uncommenting
     let g:NERDTrimTrailingWhitespace = 1
-
-
-"" Current  colorscheme
     " Allow commenting and inverting empty lines (useful when commenting a region)
     let g:NERDCommentEmptyLines = 1
     " Enable trimming of trailing whitespace when uncommenting
     let g:NERDTrimTrailingWhitespace = 1
 
-
 "" Current  colorscheme
     " colorscheme slate
-    colorscheme wombat256
-    " colorscheme wombat256mod
-    set termguicolors
-    set background=dark
+    " colorscheme wombat
     " colorscheme boa
+    " colorscheme github-theme
+    " colorscheme wombat256mod
+    colorscheme dracula
+    color dracula
+    " set termguicolors
+    " set background=dark
 
 "" Better colorscheme for diff.
     if &diff

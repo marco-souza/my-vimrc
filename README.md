@@ -31,7 +31,6 @@ Plugins installed
 * FuzzyFinder
 * vCoolor.vim
 * vim-fugitive
-* vim-pathogen
 * nerdcommenter
 * vim-powerline
 * vim-nerdtree-tabs
