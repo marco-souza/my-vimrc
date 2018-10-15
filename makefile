@@ -15,3 +15,7 @@ submit:
 
 update:
 	git pull origin
+
+apply:
+	cp {.,~}/.vimrc
+	ln -sf ~/.vimrc ~/.config/nvim/init.vim
