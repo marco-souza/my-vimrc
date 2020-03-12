@@ -1,21 +1,7 @@
-ALL: update apply submit
+ALL: clean install
 
 install:
-	# Clone vundle
-	if [ ! -d ~/.vim/bundle/Vundle.vim ]; then \
-		echo "Installing Vundle..."; \
-		git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim; \
-	fi
-	cp .vimrc .neovimrc ~/;
-	vim +PluginInstall +qall;
+	./vim-setup.sh
 
-submit:
-	git commit -a
-	git push origin --all
-
-update:
-	git pull origin
-
-apply:
-	cp {.,~}/.vimrc
-	ln -sf ~/.vimrc ~/.config/nvim/init.vim
+clean:
+	./vim-remove.sh
