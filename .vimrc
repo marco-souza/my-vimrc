@@ -1,5 +1,5 @@
 "" ---
-"" Initial Settings [start]
+"" Initial Settings
     " Encoding of file
     scriptencoding utf-8
     set encoding=utf-8
@@ -8,37 +8,32 @@
     " set wildmode=longest:full,full
     " set wildmenu
 
-"" Initial Settings [end]
-"" ---
-
 
 "" ---
-"" Plugins [start]
-    "" Plugin Install
-
-        "" Using Plug
-        call plug#begin()
+"" Plugins
+    "" Using Plug
+    call plug#begin()
 
         "" Themes & UI
-            Plug 'monkoose/boa.vim'                               " Theme
-            Plug 'stephenmckinney/vim-solarized-powerline'
+        Plug 'monkoose/boa.vim'
+        Plug 'stephenmckinney/vim-solarized-powerline'
 
         "" Plugins
-            Plug 'severin-lemaignan/vim-minimap'    " Vim Minimap
-            Plug 'Lokaltog/vim-powerline'           " Powerline
-            Plug 'wincent/command-t'                " Command-T
-            Plug 'lilydjwg/colorizer'               " Colorizer
-            Plug 'KabbAmine/vCoolor.vim'            " vCoolor
-            Plug 'scrooloose/nerdcommenter'         " NERDCommenter
-            Plug 'mattn/emmet-vim'                  " Emmet
-            Plug 'Yggdroot/indentLine'              " indent guide
-            Plug 'tpope/vim-pathogen'               " Pathogen (plugins folder)
-            Plug 'tpope/vim-fugitive'               " Fugitive (vim)
-            Plug 'scrooloose/nerdtree'              " NERDTree
-            Plug 'jistr/vim-nerdtree-tabs'          " NERDTree Tabs
-            Plug 'vim-syntastic/syntastic'          " Syntastic (syntax checker)
+        Plug 'severin-lemaignan/vim-minimap'    " Vim Minimap
+        Plug 'Lokaltog/vim-powerline'           " Powerline
+        Plug 'wincent/command-t'                " Command-T
+        Plug 'lilydjwg/colorizer'               " Colorizer
+        Plug 'KabbAmine/vCoolor.vim'            " vCoolor
+        Plug 'scrooloose/nerdcommenter'         " NERDCommenter
+        Plug 'mattn/emmet-vim'                  " Emmet
+        Plug 'Yggdroot/indentLine'              " indent guide
+        Plug 'tpope/vim-pathogen'               " Pathogen (plugins folder)
+        Plug 'tpope/vim-fugitive'               " Fugitive (vim)
+        Plug 'scrooloose/nerdtree'              " NERDTree
+        Plug 'jistr/vim-nerdtree-tabs'          " NERDTree Tabs
+        Plug 'vim-syntastic/syntastic'          " Syntastic (syntax checker)
 
-        call plug#end()
+    call plug#end()
 
 
     "" Plugin Settings
@@ -125,12 +120,10 @@
             set statusline +=%{SyntasticStatuslineFlag()}
             set statusline +=%*
 
-"" Plugin [end]
-"" ---
 
 
 "" ---
-"" Personal Settings [start]
+"" Personal Settings
     " Hotkeys
         "" Close respective chars
         ino " ""<left>
@@ -254,5 +247,3 @@
             return ":silent set hlsearch\<CR>"
         endfunction
 
-"" Editor Settings [end]
-"" ---
